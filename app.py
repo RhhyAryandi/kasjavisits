@@ -36,7 +36,7 @@ def get_url(server_name):
     elif server_name in {"BR", "US", "SAC", "NA"}:
         return "https://client.us.freefiremobile.com/GetPlayerPersonalShow"
     else:
-        return "https://clientbp.ggblueshark.com/GetPlayerPersonalShow"
+        return "https://clientbp.ggwhitehawk.com/GetPlayerPersonalShow"
 
 def parse_protobuf_response(response_data):
     try:
@@ -57,7 +57,7 @@ def parse_protobuf_response(response_data):
 
 async def visit(session, url, token, uid, data):
     headers = {
-        "ReleaseVersion": "OB50",
+        "ReleaseVersion": "OB49",
         "X-GA": "v1 1",
         "Authorization": f"Bearer {token}",
         "Host": url.replace("https://", "").split("/")[0]
